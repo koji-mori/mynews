@@ -29,3 +29,13 @@ Route::controller(NewsController::class)->group(function() {
 Route::controller(NewsController::class)->group(function() {
     Route::get('admin/profile/edit', 'edit');
 });
+
+//「http://XXXXXX.jp/XXX というアクセスが来たときに、 AAAControllerのbbbというAction に渡すRoutingの設定」を書いてみてください
+
+
+//Route::get('xxx', 'bbb');
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
