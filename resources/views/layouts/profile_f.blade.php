@@ -21,10 +21,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        {{-- Laravel標準で用意されているCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        {{-- この章の後半で作成するCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        
     </head>
     <body>
         <div id="app">
@@ -46,12 +43,10 @@
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav">
-                             <!-- Authentication Links -->
-                        {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
-                        @guest
+                              @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a></li>
                         {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
-                        @else
+                              @else
                             <li class="nav-item dropdown">
                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
