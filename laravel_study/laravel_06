@@ -1,0 +1,30 @@
+1.Bladeテンプレートで、埋め込みたい箇所に利用するワードは何だったでしょうか？
+    問題文の意味がわかりません　html cssのことでしょうか？
+
+2.Webpackで使われているBootstrapやSCSSはどういったものか、調べられる範囲で調べてみましょう
+    Bootstrapは、レスポンシブなウェブサイトやウェブアプリケーションを効率的に開発するためのスタイルシート
+    SCSS（Sassy CSS）は、CSSの拡張記法の一つであり、より柔軟で効率的なCSSの記述を可能にするためのツールです。
+    
+【応用】 resources/views/layouts/admin.blade.php をコピーして profile.blade.php を
+    同じディレクトリ（resources/views/layouts）に作成しましょう。また、以下の部分を下の※1のように修正しましょう
+    
+    
+【応用】 プロフィール作成画面用に、resources/views/admin/profile/create.blade.php ファイルを作成し、
+        3. で作成した profile.blade.phpファイルを読み込み、また プロフィールのページであることがわかるように 
+        titleとcontentを編集しましょう（ヒント: resources/views/admin/news/create.blade.php を参考にします）
+        
+        
+【応用】 resources/sass/admin.scss をコピーして profile.scss をresources/sassに作成しましょう。後ほ どこちらは課題で編集します
+【応用】 webpack.mix.jsを編集して、profile.scss をコンパイルするように編集してみましょう
+【応用】 6. ができたら、実際に npm run dev コマンドでコンパイルしてみましょう
+【応用】 7. ができたら、ブラウザで /admin/profile/createでプロフィール作成画面が表示されるか確認しましょう
+※1
+
+        {{-- 次の1行を削除 --}}
+        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        {{-- 次の1行を追記 --}}
+        <link href="{{ secure_asset('css/profile.css') }}" rel="stylesheet">
+下記、応用編の完成例です。
+
+
+

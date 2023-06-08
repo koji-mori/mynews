@@ -1,0 +1,25 @@
+1,Viewは何をするところでしょうか。簡潔に説明してみてください
+    HTMLやCSSを使用して、ユーザーに表示される画面のレイアウトを定義します。
+    例えば、ヘッダーやフッターの配置、ナビゲーションメニューのデザインなどをビューで指定します。
+
+
+2,プログラマーがHTMLを書かずにPHPなどのプログラミング言語やフレームワークを使う必要があるのはどういった理由でしょうか
+    プログラミング言語やフレームワークを使うことで、動的なコンテンツの生成や表示が可能に
+
+
+【応用】 前々章でAdmin/ProfileControllerのadd Action, edit Action に下記のように記述しました
+  public function add()
+  {
+      return view('admin.profile.create');
+  }
+  public function edit()
+  {
+      return view('admin.profile.edit');
+  }
+この場合、add Action と edit Action を描画するには、それぞれどこのディレクトリに何というBladeファイルを設置すれば良いでしょうか。
+    viewsとゆうディレクトリのプロフィールファイル内にedit,addのBladeファイルを作成すればいい
+    
+    
+    
+4.【応用】3. の答えを実際に作成してみましょう。また、作成したBladeファイルにhtmlで記述して装飾してみましょう
+    
